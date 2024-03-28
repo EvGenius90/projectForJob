@@ -1,0 +1,356 @@
+
+*
+    box-sizing: border-box
+    
+    
+html, body
+    // background: url(../img/background.png) center/cover no-repeat
+    color: #fff
+    font-family: "Montserrat", sans-serif
+    
+    min-height: 100vh
+
+body
+    padding-top: 43px
+
+html
+    background: url(../img/background.png) no-repeat center center fixed
+    background-size: cover
+
+    // position: absolute
+
+@mixin font-color
+    color: rgba(255, 255, 255, 0.5)
+
+    
+    
+    
+.header
+    margin-bottom: 95px
+    .container
+        max-width: 1360px
+        padding-left: 20px
+        padding-right: 20px
+        margin: 0 auto
+    &__content
+        height: 40px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo
+        width: 169px
+        border-top: white solid 1px
+        border-bottom: white solid 1px
+        font-weight: 600
+        font-size: 20px
+        line-height: 40px
+        cursor: pointer
+        height: 40px
+    &__menu
+        &-close
+            display: none
+        &-list
+            display: flex
+            list-style: none
+            margin: 0
+            padding: 0
+            li
+                font-weight: 400
+                font-size: 14px
+                line-height: 123%
+                transition: 0.5s
+                a
+                    color: #fff
+                    text-decoration: none
+            @media ( hover: hover )
+                li:hover
+                    font-size: 15px
+                    border-bottom: 1px solid white
+            li:not(:last-child)
+                margin-right: 30px
+    &__block-phone
+        display: flex
+        align-items: center
+        &-icon
+            width: 40px
+            height: 40px
+            // padding-top: 5px
+            text-align: center
+            margin-right: 14.40px
+            border: #FFFFFF solid 1px
+            border-radius: 100%
+            svg
+                margin-top: 10px
+        &-number
+            font-weight: 600
+            font-size: 18px
+            line-height: 123%
+
+.main
+    .container
+        max-width: 1360px
+        padding-left: 20px
+        padding-right: 20px
+        margin: 0 auto
+    &__content
+        // flex-shrink: 0
+        display: flex
+        // justify-content: space-between
+        // padding-left: calc( (100% - 1340px) / 2)
+        // padding-left: max(20px, calc((100& - 1340px) / 2 ))
+        &-left
+            // flex-shrink: 0
+            // position: relative
+            margin-right: 84px
+            max-width: 800px
+            // padding-top: 90px
+            &-title
+                font-weight: 600
+                font-size: 65px
+                line-height: 135%
+                text-transform: uppercase
+                margin: 0
+                margin-bottom: 53px
+            &-subtitle
+                padding-left: 24px
+                border-left: white solid 1px
+                font-weight: 400
+                font-size: 16px
+                line-height: 150%
+                @include font-color
+                margin-bottom: 64px
+            &-block
+                display: flex
+                // flex-wrap: wrap
+                margin-bottom: 112px
+                &-left
+                    width: clamp(310px, 24vw, 380px)
+                    // width: 380px
+                    height: 71px
+                    margin-right: 40px
+                    border: 1px solid #fff
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    cursor: pointer
+                    &-text
+                        width: 100%
+                        height: 100%
+                        text-align: center
+                        transition: 0.5s
+                        p
+                            margin-top: 25px
+                    &-arrow
+                        transition: 0.5s
+                        border-left: 1px solid #fff
+                        width: 68px
+                        height: 100%
+                        text-align: right
+                        padding-right: 13px
+                        svg
+                            margin-top: 38px
+                &-left:hover
+                    .main__content-left-block-left-text
+                        background: white
+                        color: #07305d
+                    .main__content-left-block-left-arrow
+                        border-left: 2px solid #0b3461
+                        background: white
+                        svg
+                            path
+                                stroke: #07305d
+                &-right
+                    // width: 380px
+                    width: clamp(310px, 24vw, 380px)
+                    height: 71px
+                    border: 1px solid #fff
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    cursor: pointer
+                    // padding-left: 24px
+                    // padding-right: 13px
+                    &-text
+                        text-align: center
+                        width: 100%
+                        height: 100%
+                        transition: 0.5s
+                        p
+                            margin-top: 25px
+                    &-arrow
+                        border-left: 1px solid #fff
+                        width: 68px
+                        height: 100%
+                        text-align: right
+                        padding-right: 13px
+                        transition: 0.5s
+                        svg
+                            margin-top: 38px
+                &-right:hover
+                    .main__content-left-block-right-text
+                        background: white
+                        color: #07305d
+                    .main__content-left-block-right-arrow
+                        border-left: 2px solid #0b3461
+                        background: white
+                        svg
+                            path
+                                stroke: #07305d
+            &-lower-block
+                display: flex
+                &-left
+                    width: 190px
+                    height: 137px
+                    border-left: 1px solid #fff
+                    padding-left: 24px
+                    margin-right: 230px
+                    &-number
+                        font-weight: 600
+                        font-size: 40px
+                        line-height: 141%
+                        text-transform: uppercase
+                        margin-bottom: 30px
+                    &-text
+                        font-weight: 400
+                        font-size: 16px
+                        line-height: 123%
+                        @include font-color
+                &-right
+                    width: 202px
+                    height: 132px
+                    border-left: 1px solid #fff
+                    padding-left: 24px
+                    &-number
+                        font-weight: 600
+                        font-size: 40px
+                        line-height: 141%
+                        text-transform: uppercase
+                        margin-bottom: 30px
+                    &-text
+                        font-weight: 400
+                        font-size: 16px
+                        line-height: 123%
+                        @include font-color
+        &-right
+            // position: relative
+            // top: 141px
+            // bottom: 0
+            // right: 10px
+            // width: calc( 100% - 800px - 84px )
+            height: 771px
+            
+            img
+                height: 100%
+                // vertical-align: middle
+                // align: center
+    
+.left-menu
+    position: absolute
+    z-index: 2
+    top: 0px
+    width: 0
+    overflow: hidden
+    background: #0f1d45
+    height: 995px
+    transition: 0.1s
+    // padding: 108px 57px 0 75px
+    // padding-top: 57px
+    
+    // padding-bottom: 0
+    .close
+        position: absolute
+        top: 40px
+        right: 40.59px
+        font-size: 25px
+        cursor: pointer
+    &__title
+        font-weight: 600
+        font-size: 50px
+        line-height: 149%
+        margin-bottom: 65px
+    .form
+        &__firstName
+            width: 480px
+            height: 36px
+            display: block
+            border: none
+            font-weight: 400
+            font-size: 20px
+            line-height: 123%
+            @include font-color
+            border-bottom: 1px solid white
+            background: #0f1d45
+            margin-bottom: 65px
+        &__phone
+            width: 480px
+            height: 36px
+            display: block
+            border: none
+            font-weight: 400
+            font-size: 20px
+            line-height: 123%
+            @include font-color
+            border-bottom: 1px solid white
+            background: #0f1d45
+            margin-bottom: 110px
+        &__forCheckbox
+            display: flex
+            margin-bottom: 89px
+            .checkbox
+                margin-right: 23px
+                width: 30px
+                height: 30px
+                // background: #0f1d45
+            p
+                font-weight: 400
+                font-size: 16px
+                line-height: 129%
+                letter-spacing: 0.04em
+                
+        &__button
+            display: flex
+            width: 380px
+            height: 71px
+            border: 1px solid #fff
+            cursor: pointer
+            &-btn
+                width: 312px
+                cursor: pointer
+                color: #fff
+                background: #0f1d45
+            &-text
+                width: 312px
+                text-align: center
+                p
+                    margin-top: 25px
+                    
+            &-arrow
+                border-left: 1px solid #fff
+                width: 68px
+                height: 100%
+                text-align: right
+                padding-right: 13px
+                svg
+                    margin-top: 38px
+
+.leftMenu
+    width: 640px
+    // min-height: 500px 
+    // max-height: 952px
+    height: 995px
+    padding: 108px 57px 0 75px
+    
+
+.fon
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    width: 100%
+    height: 995px
+    backdrop-filter: blur(15px)
+    background: rgba(15, 29, 69, 0.6)
+    display: none
+
+.dBlock
+    display: block
