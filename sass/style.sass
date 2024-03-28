@@ -4,7 +4,6 @@
     
     
 html, body
-    // background: url(../img/background.png) center/cover no-repeat
     color: #fff
     font-family: "Montserrat", sans-serif
     
@@ -17,7 +16,6 @@ html
     background: url(../img/background.png) no-repeat center center fixed
     background-size: cover
 
-    // position: absolute
 
 @mixin font-color
     color: rgba(255, 255, 255, 0.5)
@@ -74,7 +72,6 @@ html
         &-icon
             width: 40px
             height: 40px
-            // padding-top: 5px
             text-align: center
             margin-right: 14.40px
             border: #FFFFFF solid 1px
@@ -93,17 +90,10 @@ html
         padding-right: 20px
         margin: 0 auto
     &__content
-        // flex-shrink: 0
         display: flex
-        // justify-content: space-between
-        // padding-left: calc( (100% - 1340px) / 2)
-        // padding-left: max(20px, calc((100& - 1340px) / 2 ))
         &-left
-            // flex-shrink: 0
-            // position: relative
             margin-right: 84px
             max-width: 800px
-            // padding-top: 90px
             &-title
                 font-weight: 600
                 font-size: 65px
@@ -111,6 +101,8 @@ html
                 text-transform: uppercase
                 margin: 0
                 margin-bottom: 53px
+                animation-name: sladeIn
+                animation-duration: 1s
             &-subtitle
                 padding-left: 24px
                 border-left: white solid 1px
@@ -121,11 +113,9 @@ html
                 margin-bottom: 64px
             &-block
                 display: flex
-                // flex-wrap: wrap
                 margin-bottom: 112px
                 &-left
                     width: clamp(310px, 24vw, 380px)
-                    // width: 380px
                     height: 71px
                     margin-right: 40px
                     border: 1px solid #fff
@@ -160,7 +150,6 @@ html
                             path
                                 stroke: #07305d
                 &-right
-                    // width: 380px
                     width: clamp(310px, 24vw, 380px)
                     height: 71px
                     border: 1px solid #fff
@@ -168,8 +157,6 @@ html
                     align-items: center
                     justify-content: space-between
                     cursor: pointer
-                    // padding-left: 24px
-                    // padding-right: 13px
                     &-text
                         text-align: center
                         width: 100%
@@ -232,17 +219,18 @@ html
                         line-height: 123%
                         @include font-color
         &-right
-            // position: relative
-            // top: 141px
-            // bottom: 0
-            // right: 10px
-            // width: calc( 100% - 800px - 84px )
             height: 771px
             
             img
                 height: 100%
-                // vertical-align: middle
-                // align: center
+
+// анимация заголовка
+@keyframes sladeIn
+    0%
+        opacity: 0
+        transform: translateX(-90%)
+    100%
+        // margin-right: 0%
     
 .left-menu
     position: absolute

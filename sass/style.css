@@ -127,6 +127,8 @@ html {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 53px;
+  animation-name: sladeIn;
+  animation-duration: 1s;
 }
 
 .main__content-left-subtitle {
@@ -296,6 +298,15 @@ html {
 
 .main__content-right img {
   height: 100%;
+}
+
+@keyframes sladeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-90%);
+  }
+  100% {
+  }
 }
 
 .left-menu {
